@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant App</title>
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- NAVEGACION -->
+    <nav class="navbar navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            Restaurant App
+        </a>
+    </nav>
+
+    <div class="container-fluid">
+        <div id="Fase1" class="row pt-2">
+            <p class='text-info'>Fase 1</p>
+        </div>
+        <div id="Fase2" class="row pt-2">
+            <p class='text-info'>Fase 2</p>
+            <div id="menu" class='col-md-3 card-header'>
+                <h5 class='text-info'>Menu</h5>
+            </div>
+            <!-- APLICACION -->
+            <div id="App" class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Que quieres comer?</h4>
+                    </div>
+                    <form id="pedido-menu-form" name="pedido-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="nombre-plato" placeholder="Escriba lo que quiere comer"
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="opcion-mas-comida" min="0" max="1"
+                                placeholder="Quiere comer algo mas? 1:Si/0:No" class="form-control">
+                        </div>
+                        <input name="guardar-pedido" type="submit" value="Añadir al pedido" class="btn btn-info btn-block">
+                    </form>
+                </div>
+                <div id="Fase3" class="card mt-2 col-md-12 mx-auto">
+                    <div id=ticket></div>
+                    <div id="opcion-de-pago"></div>
+                    <div id="pedido-fuera-de-menu"></div>
+                </div>
+            </div>
+            <div id="pedido-list" class="col-md-4"></div>
+        </div>
+    </div>
+    <script src="Fase1.js"></script>
+    <script src="Fase2.js"></script>
+    <script src="Fase3.js"></script>
+</body>
+
+</html>
